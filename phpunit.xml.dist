@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="APP_KEY" value="base64:OmpfXub8W2EaVQ6Wem2lIJXUTdTaTwsXnaSnVfcEv6A="/>
+        <env name="MAIL_DRIVER" value="log"/>
+        <env name="CACHE_DRIVER" value="redis"/>
+        <env name="PARASUT_CLIENT_ID" value="fake-parasut-client-id"/>
+        <env name="PARASUT_CLIENT_SECRET" value="fake-parasut-client-secret"/>
+        <env name="PARASUT_USERNAME" value="fake-parasut-username"/>
+        <env name="PARASUT_PASSWORD" value="fake-parasut-password"/>
+        <env name="PARASUT_COMPANY_ID" value="fake-parasut-company-id"/>
+        <env name="PARASUT_GRANT_TYPE" value="password"/>
+    </php>
+</phpunit>

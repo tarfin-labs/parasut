@@ -1,0 +1,78 @@
+{
+    "name": "tarfinlabs/parasut",
+    "description": "Paraşüt Accounting & Invoicing cloud service (parasut.com) Integration Package for Laravel 5.5+/6+/7+",
+    "keywords": [
+        "parasut",
+        "parasut-api",
+        "accounting",
+        "invoicing",
+        "tarfinlabs",
+        "laravel",
+        "laravel-package"
+    ],
+    "homepage": "https://github.com/tarfinlabs/parasut",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Yunus Emre Deligöz",
+            "email": "emre.deligoz@tarfin.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Hakan Özdemir",
+            "email": "hakan.ozdemir@tarfin.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Faruk Can",
+            "email": "faruk.can@tarfin.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Turan Karatuğ",
+            "email": "turan.karatug@tarfin.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "guzzlehttp/guzzle": "^6.5",
+        "illuminate/support": "^7.0"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "^1.9",
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "TarfinLabs\\Parasut\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TarfinLabs\\Parasut\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TarfinLabs\\Parasut\\ParasutServiceProvider"
+            ],
+            "aliases": {
+                "Parasut": "TarfinLabs\\Parasut\\ParasutFacade"
+            }
+        }
+    }
+}
